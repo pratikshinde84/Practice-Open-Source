@@ -1,6 +1,8 @@
 # Practice Open Source — Java Basics ☕
 
-A beginner-friendly collection of standalone Java examples and open-source issues. **First contribution? Start here!**
+A beginner-friendly Java **debugging challenge repository** for first-time open-source contributors. **20 existing Java programs contain intentionally introduced bugs**, each paired with a GitHub issue. Your task is to repair one existing file and open a pull request. The other examples are starting points for practice.
+
+> **Competition notice:** Some example programs are deliberately incorrect. This is intentional, not a production-ready algorithms library. The GitHub issue for each bug describes the expected result; contributors should investigate and fix the code.
 
 ## How to Create Your First Pull Request
 
@@ -26,22 +28,22 @@ Replace `YOUR_USERNAME` with your actual GitHub username. Clone **your fork**, n
 Never work directly on `main` for a contribution:
 
 ```bash
-git checkout -b add-second-largest-array
+git checkout -b fix-array-reversal
 ```
 
 Choose your own descriptive branch name, preferably one per issue.
 
 ### Step 4 — Pick an issue and edit the code
 
-Visit the **[Issues tab](https://github.com/pratikshinde84/Practice-Open-Source/issues)** and choose an open beginner task. Read its requirements, then create a Java file in the right folder, such as `arrays/SecondLargest.java`. The public class name must match the filename, and each example should have a `main` method. Avoid external libraries.
+Visit the **[Issues tab](https://github.com/pratikshinde84/Practice-Open-Source/issues)** and choose one of the 20 open **[Bug]** issues. Read the problem and **edit its existing Java file** (for example, `arrays/ReverseArray.java`); do not create an extra Java file. Keep the public class name and file path unchanged. Avoid external libraries.
 
 ### Step 5 — Compile and run your Java program
 
 Example commands (replace with your own Java filename):
 
 ```bash
-javac arrays/SecondLargest.java
-java -cp arrays SecondLargest
+javac arrays/ReverseArray.java
+java -cp arrays ReverseArray
 ```
 
 Check the output, test edge cases, and fix errors before committing. Java compilation creates `.class` files locally; the `.gitignore` prevents tracking these.
@@ -50,8 +52,8 @@ Check the output, test edge cases, and fix errors before committing. Java compil
 
 ```bash
 git status
-git add arrays/SecondLargest.java
-git commit -m "Add second largest element Java example"
+git add arrays/ReverseArray.java
+git commit -m "Fix array reversal bug"
 ```
 
 If Git asks for your identity, set it once using your own details:
@@ -66,7 +68,7 @@ Stage only the files you intend to contribute.
 ### Step 7 — Push the branch to your fork
 
 ```bash
-git push -u origin add-second-largest-array
+git push -u origin fix-array-reversal
 ```
 
 Use the same branch name you created in Step 3. If GitHub asks you to authenticate, follow its browser or credential-manager prompt.
@@ -76,9 +78,9 @@ Use the same branch name you created in Step 3. If GitHub asks you to authentica
 1. Open **your fork** in your browser. Click **Compare & pull request**, or go to **Pull requests → New pull request**.
 2. Make sure **base repository** is `pratikshinde84/Practice-Open-Source` and **base branch** is `main`.
 3. Set **head repository** to `YOUR_USERNAME/Practice-Open-Source` and **compare branch** to your feature branch.
-4. Add a clear title, such as `Add second largest element Java example`.
+4. Add a clear title, such as `Fix array reversal bug`.
 5. Describe the algorithm, the filename, sample output, and how you tested it.
-6. Include `Closes #1` (replace `1` with the number of your chosen issue).
+6. Include `Closes #11` (replace `1` with the number of your chosen issue).
 7. Click **Create pull request**. You've submitted your first contribution!
 
 ### Step 9 — Respond to review feedback
@@ -86,7 +88,7 @@ Use the same branch name you created in Step 3. If GitHub asks you to authentica
 If a maintainer requests changes, update the same local branch, then commit and push again:
 
 ```bash
-git add arrays/SecondLargest.java
+git add arrays/ReverseArray.java
 git commit -m "Improve second largest element example"
 git push
 ```
@@ -121,7 +123,7 @@ Run `git remote add upstream` only the first time. For future updates, skip that
 | `numbers/` | Prime check, factorial, Fibonacci, reverse number, sum of digits, Armstrong number |
 | `patterns/` | Right triangle star pattern |
 
-There are **26 standalone Java programs**, each with a runnable `main` method. No frameworks, dependency managers or external Java libraries are required.
+There are **26 standalone Java programs**, including **20 intentional bug-fix challenges**, each with a runnable `main` method. No frameworks, dependency managers or external Java libraries are required.
 
 ## Running an Existing Example
 
@@ -132,11 +134,11 @@ javac arrays/ReverseArray.java
 java -cp arrays ReverseArray
 ```
 
-Change the input values inside the file and rerun to practice.
+**Note:** Some examples intentionally produce wrong output or fail. That is the point of the debugging issues. Change and test code locally on your own branch before submitting a pull request.
 
 ## Open Source Contributions
 
-All skill levels are welcome, especially beginners. See the [open issues](https://github.com/pratikshinde84/Practice-Open-Source/issues) for ideas and read [CONTRIBUTING.md](CONTRIBUTING.md) for code standards. Please submit one focused change per PR and don't duplicate existing files.
+All skill levels are welcome, especially beginners. Choose from [20 bug-fix issues](https://github.com/pratikshinde84/Practice-Open-Source/issues), correct the existing file, and read [CONTRIBUTING.md](CONTRIBUTING.md) for code standards. Submit one focused bug fix per PR; intentionally broken programs should start giving the expected outputs after the fix.
 
 ## License
 
